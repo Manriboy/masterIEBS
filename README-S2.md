@@ -14,88 +14,79 @@ El primero contrato tiene como objetivo la creación del token MBY. Se pide la c
 
 ### Contrato 2: Sprint_2_Salva-vidas.sol
 
-En este segundo contrato, como se explica en los objetivos del proyecto, se desarrolla la compra y venta de los tokens y la posibilidad de invertir en los proyectos mencionados
+En este segundo contrato, como se explica en los objetivos del proyecto, se desarrolla la compra y venta de los tokens y la posibilidad de invertir en los proyectos mencionados.
 
+<img width="445" alt="Captura de pantalla 2024-03-13 a la(s) 11 38 37" src="https://github.com/Manriboy/masterIEBS/assets/156150473/7fa95533-b706-41e5-813f-60e2ea0baf08">
 
-![Captura de pantalla 2024-03-06 a la(s) 21 31 17](https://github.com/Manriboy/masterIEBS/assets/156150473/272965db-7239-4b1b-a777-5937da7c9977)
+En una primera instancia, se define la librería de ERC20 y se inicializa el contrato. Para comenzar, se incluye la definición de las variables públicas mby y direccion_mby, que corresponden al token y a la dirección del contrato de creación de MBY, más el precio del token respecto a ETH y su compra mínima. Estas dos (2) últimas variables son constantes definidas y públicas para el contrato.
 
-Luego se crean dos (2) funciones donde se registra el nuevo individuo con los tres (3) atributos mencionados arriba y, en caso de que ya exista el registro, responder que ya fue creado.
+<img width="814" alt="Captura de pantalla 2024-03-13 a la(s) 12 14 32" src="https://github.com/Manriboy/masterIEBS/assets/156150473/4ed8c4b8-2f3c-4974-9339-5da79f39dac4">
 
-![Captura de pantalla 2024-03-06 a la(s) 21 32 04](https://github.com/Manriboy/masterIEBS/assets/156150473/16455f2d-0fab-4936-a27a-c6491d900e9c)
+En el extracto anterior, se presentan los tres (3) proyectos diferentes (vegetal, animal y humano), se mapea el costo de los mismos y se crean los eventos de compra de tokens más la inversión en los proyectos. Este último incluye los proyectos en sí, los tokens utilizados, la cantidad y un mensaje para confirmar la misma.
 
-Finalmente se crea la última función para traer los atributos de una persona ingresando su nombre. Esta será la función que posteriormente utilizará el contrato 2.
+<img width="664" alt="Captura de pantalla 2024-03-13 a la(s) 12 23 19" src="https://github.com/Manriboy/masterIEBS/assets/156150473/32b0a544-1453-459c-b56b-7255fa0859e7">
 
-### Contrato 2: Sprint_1_Respuesta.sol
+En la imagen de arriba se presenta el constructor que pide como argumento para desplegar el contrato, la dirección que tendrá los tokens especiales que requiere el contrato (mby_address). Se incluye el instanciamiento de la misma más los costos estipulados en tokens para cada uno de los proyectos mencionados más arriba.
 
-![Captura de pantalla 2024-03-06 a la(s) 21 34 04](https://github.com/Manriboy/masterIEBS/assets/156150473/1061bd2f-75a2-42b3-b38d-43a28f270497)
+<img width="489" alt="Captura de pantalla 2024-03-13 a la(s) 12 30 35" src="https://github.com/Manriboy/masterIEBS/assets/156150473/6eea9503-8dde-49cc-9cae-6238f2dda259">
 
-Al comienzo del código, se genera una interfaz de conexión para utilizar una función de otro contrato (get_datos)
+La función que se muestra arriba es la función de compra mostrada en clases. Esta se modificó para entregar 1000 tokens cada 1 ETH y se incluyeron los cambios correspondientes a la nueva moneda en los mensajes
 
-![Captura de pantalla 2024-03-06 a la(s) 21 35 16](https://github.com/Manriboy/masterIEBS/assets/156150473/032cb88c-1709-477f-aa60-00fedb337dc3)
+<img width="534" alt="Captura de pantalla 2024-03-13 a la(s) 12 38 28" src="https://github.com/Manriboy/masterIEBS/assets/156150473/3c686277-11d6-430a-8217-413018e5b800">
 
-En la imagen anterior, se muestra la inicialización del contrato 2 y la llamada a la interfaz del contrato 1. En este caso, se pide la dirección del contrato 1 para saber donde ir a buscar la función correspondiente
+Al igual que la anterior, se muestra en esta foto la función de VentaMBY que es la misma función que se entregó en las clases, donde se le compran al usuario los MBY por ETH. Estas se compran a 1000 tokens por ETH
 
-![Captura de pantalla 2024-03-06 a la(s) 21 36 33](https://github.com/Manriboy/masterIEBS/assets/156150473/c0b0252d-63dd-4bce-afde-e3d786f3ebe4)
+<img width="897" alt="Captura de pantalla 2024-03-13 a la(s) 13 30 11" src="https://github.com/Manriboy/masterIEBS/assets/156150473/631e5ac7-6850-46f5-9642-d1fd6136394d">
 
-Por último, se muestra el cuerpo del contrato donde se define la función calculo. Esta función será la que, con los datos obtenidos de get_datos el contrato 1, hará el calculo de la expectativa de vida que tiene el individuo preguntado. En el cuerpo de la función se observa que, en caso de ser fumador, la espectativa de vida es 70 años menos la edad que ya tiene. Si no es fumador, son 90 menos los años que tiene. La multiplicación de 12 es para llevar el tiempo a meses (en Solidity no se puede utilizar la letra ñ de años). Para cerrar la imagen, se incluye la función unit2str para convertir el número entregado en un string y poder incluirlo en el mensaje.
+En la imagen anterior, se presenta la función para invertir en proyectos. Esta función requiere dos (2) inputs que son el monto a invertir y el proyecto elegido. Luego de esto están las definiciones para que el monto invertido no sea menor al costo de un proyecto, que hayan suficientes MBY para el monto solicitado y verificar el aprove del contrato para gestionar los fondos entregados. Luego se presenta el extracto donde está la instrucción de transferir los tokens el usuario al contrato nuevamente según el costo del proyecto elegido y las condiciones para escribir el mensaje (depdendiendo del proyecto elegido). Se destaca que dentro del mensaje a mostrar por consola, se sombrea la definición "uint2str" que ayuda a convertir un número en un string para el mensaje. Esta definición incluye una función que se escribe a continuación
 
-## Respaldo de verificación y depliegue de los contratos
+<img width="514" alt="Captura de pantalla 2024-03-13 a la(s) 13 45 35" src="https://github.com/Manriboy/masterIEBS/assets/156150473/2b230832-d32c-4a9c-bcd8-b21c12a2afbd">
 
-En la primera imagen a continuación, se muestra el respeldo en el despliegue del primero contrato
+## Direcciones y transacciones involucradas
 
-![Captura de pantalla 2024-03-06 a la(s) 21 45 30](https://github.com/Manriboy/masterIEBS/assets/156150473/e5f52815-3892-498d-a018-1d778e540cae)
+### Ambiente Sepholia Testnet
 
-Se puede observar el mensaje de release exitoso más los inputs y funciones que se pueden ejecutar el contrato en particular
+Contrato 1: Creación de token
+0xC965bCe6f7A7106C1dda3878ca1903640695437F
+IMAGEN
+CODIGO
 
-![Captura de pantalla 2024-03-06 a la(s) 21 47 04](https://github.com/Manriboy/masterIEBS/assets/156150473/30990dcc-a591-4aa6-845f-384c3b2a88fa)
+Contrato 2: Compra, venta e inversión de token
+0xAF35Fd63c4fAB18DA614FCe6d30818AF27324D7D
+IMAGEN
+CODIGO
 
-En esta segunda imagen, se muestra el contrato 2, también con el mensaje de despliegue exitoso, la única función calculo que tiene este contrato 2 y se destaca también el input de address donde, para desplegar un contrato que tiene un llamado a otro contrato, exige primero la dirección del contrato solicitado.
+Despliegue de Smart Contract 1
+Hash transaccion
+0x9361f38b809b631723bf34355ac0e49979051fed73fc082c7a8bbe61889dd775
+IMAGEN
 
-## Respaldo de contratos y transacciones en Etherscan
+Address para incluir en Smart Contract 2
+0x0d66bc92c8C432de0b3379068F528ED97132a194 (Smart Contract 1)
+IMAGEN
 
-Primero se hace despliegue del contrato 1 utilizando una cuenta de prueba en Sepolia de mi Metamask personal
+Despliegue de Smart Contract 2
+Hash transaccion
+0xde5fcdaaf3f795d9579acb0e40909abb9c76a9b28e71b50ae17126bd2eab896d
+IMAGEN
 
-![Captura de pantalla 2024-03-06 a la(s) 22 01 43](https://github.com/Manriboy/masterIEBS/assets/156150473/e7cbbe08-3419-4539-ad28-ae61b0bd4b72)
+Funciones Smart Contract 1
+IMAGEN
 
-A continuación se muestra como el contrato fue desplegado sin problemas con respaldos en Remix y en Etherscan
+Funciones Smart Contract 2
+IMAGEN
 
-![Captura de pantalla 2024-03-06 a la(s) 22 03 22](https://github.com/Manriboy/masterIEBS/assets/156150473/2f308814-1d58-4506-ae25-1070c2f8f8b5)
+## Preguntas y respuestas
 
-![Captura de pantalla 2024-03-06 a la(s) 22 04 20](https://github.com/Manriboy/masterIEBS/assets/156150473/12550dd1-8bf9-4a4b-b14c-d2a02607f5a4)
+¿Qué caso de uso pretenden resolver los Smart Contracts que se han programado?
 
-https://sepolia.etherscan.io/tx/0x7506617951dfad5ba059e86a4d78febe73cf4c7ccde73ad12c9f1dc5e118e6ac
+El caso de uso a resolver es crear una critpomoneda que permita en invertir en estos proyectos medioambientales y solidarios a través de una plataforma segura y descentralizada donde no se de espacio para malversación de fondos. Las fundaciones adheridas a este sistema tienen total transparencia de los fondos invertidos y saben perfectamente cuanto dinero les debería llegar. Además los inversores también ganan publicidad al ser pública la inversión que están teniendo en proyectos sociales
 
-Ahora vienen los respaldos correspondientes al despliegue del contrato 2 en la misma red
+¿Qué valor añadido aporta este caso de uso a otros existentes (análisis de competencia)?
 
-![Captura de pantalla 2024-03-06 a la(s) 22 06 39](https://github.com/Manriboy/masterIEBS/assets/156150473/3f4ee8d0-2f29-4291-bb1b-768bafbb653d)
+La seguridad, descentralización y transparencia de la red de blockchain hace más atractivo para los inversionastas y para las fundaciones el participar de este proyecto. Además siendo un proyecto con tanto potencial y con su propio token, algunos inversionistas pueden empezar a involucrarse por el precio que el mismo token irá adquiriendo con el tiempo
 
-![Captura de pantalla 2024-03-06 a la(s) 22 07 19](https://github.com/Manriboy/masterIEBS/assets/156150473/82383c31-31b4-4074-b351-766a5bbe0a8e)
+¿Cómo puede mejorarse técnicamente este caso de uso?
 
-![Captura de pantalla 2024-03-06 a la(s) 22 07 38](https://github.com/Manriboy/masterIEBS/assets/156150473/04f6584a-9944-4942-b249-d8eaee6c0744)
-
-https://sepolia.etherscan.io/tx/0x631322d5f08b09269de0ebcd00466cbd59aa5e06fb2d6c741596fb3c2b4f533b
-
-Por último, se agregan algunas transacciones realizadas en ambos contratos con sus respaldos correspondientes
-
-### Transacciones contrato 1
-
-![Captura de pantalla 2024-03-06 a la(s) 22 08 36](https://github.com/Manriboy/masterIEBS/assets/156150473/353a4a3d-b2a1-435c-86fe-0704bae080ad)
-
-![Captura de pantalla 2024-03-06 a la(s) 22 09 53](https://github.com/Manriboy/masterIEBS/assets/156150473/edbc2257-e30e-49a1-ab6b-c3a7e04c4955)
-
-https://sepolia.etherscan.io/tx/0xa57baf4210a78771be8295010d1253dff210bbf57a457066cceb39d3ddcf04bf
-
-![Captura de pantalla 2024-03-06 a la(s) 22 10 49](https://github.com/Manriboy/masterIEBS/assets/156150473/6d3810ee-235b-45b1-b0e0-79762b843dcb)
-
-![Captura de pantalla 2024-03-06 a la(s) 22 11 34](https://github.com/Manriboy/masterIEBS/assets/156150473/64ca5dd4-83d7-4b1c-b615-4f93cc63fcaa)
-
-https://sepolia.etherscan.io/tx/0x8d9541849ecfb0e542dab03028fd43bfc4052f557df4b87f7bfecdba47214b41
-
-### Ejemplos de uso contrato 2
-
-![Captura de pantalla 2024-03-06 a la(s) 22 14 18](https://github.com/Manriboy/masterIEBS/assets/156150473/3060096f-25d2-491b-8d0a-148944ac8755)
-
-![Captura de pantalla 2024-03-06 a la(s) 22 15 06](https://github.com/Manriboy/masterIEBS/assets/156150473/15a08657-5ee5-42f8-b9f7-cb44943696f4)
-
-
+Se podrían crear funciones en el smart contract que permita agregar más fundaciones y más proyectos que puedan estar participando. Además de esto se podrían declarar funciones que interactuen con las cuentas de blockchain de las fundaciones para que directamente se le depositen en ETH los valores invertidos en ellos
 
