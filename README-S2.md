@@ -8,12 +8,14 @@ Este proyecto tiene como objetivo el crear un token nuevo llamado MomBreY 3.0 co
 
 ### Contrato 1: Sprint_2_MBY-token.sol
 
-El primero contrato tiene como objetivo la creación del token MBY. Se pide la creación de 1.000.000 de tokens y además se incluye una función que permite la creación de más tokens si es necesario. Estos códigos son obtenidos de las clases y vienen todas las funciones correspondientes a la documentación ERC20 
+El primero contrato tiene como objetivo la creación del token MBY. Se pide la creación de 1.000.000 de tokens y además se incluye una función que permite la creación de más tokens si es necesario. Estos códigos son obtenidos de las clases y vienen todas las funciones correspondientes a la documentación ERC20. 
 
 <img width="528" alt="Captura de pantalla 2024-03-13 a la(s) 11 30 20" src="https://github.com/Manriboy/masterIEBS/assets/156150473/846fda31-4a77-42cb-975d-830b72b18211">
 
+### Contrato 2: Sprint_2_Salva-vidas.sol
 
-En este primer extracto, se define la estructura de un "Objeto" que tendrá los atributos Nombre, Edad y si fuma o no. Después se definen las variables estilo mapping para en la siguiente función poder crear una persona con dichos atributos y marcar que se guardó el dato nuevo.
+En este segundo contrato, como se explica en los objetivos del proyecto, se desarrolla la compra y venta de los tokens y la posibilidad de invertir en los proyectos mencionados
+
 
 ![Captura de pantalla 2024-03-06 a la(s) 21 31 17](https://github.com/Manriboy/masterIEBS/assets/156150473/272965db-7239-4b1b-a777-5937da7c9977)
 
