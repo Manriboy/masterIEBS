@@ -99,6 +99,13 @@ Hash transaccion
 
 <img width="299" alt="Captura de pantalla 2024-03-13 a la(s) 14 17 18" src="https://github.com/Manriboy/masterIEBS/assets/156150473/82b45f6b-570a-4239-8290-7d208402568f">
 
+### Verificación Smart Contract 1
+
+
+
+<img width="1440" alt="Captura de pantalla 2024-03-13 a la(s) 17 29 47" src="https://github.com/Manriboy/masterIEBS/assets/156150473/e190d613-3b0b-41c8-8b7d-f8ae5d6e16cb">
+
+
 
 ## Preguntas y respuestas
 
