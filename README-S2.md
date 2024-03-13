@@ -47,34 +47,48 @@ En la imagen anterior, se presenta la función para invertir en proyectos. Esta 
 ### Ambiente Sepholia Testnet
 
 Contrato 1: Creación de token
+
 0xC965bCe6f7A7106C1dda3878ca1903640695437F
-IMAGEN
-CODIGO
+
+<img width="1440" alt="Captura de pantalla 2024-03-13 a la(s) 13 51 27" src="https://github.com/Manriboy/masterIEBS/assets/156150473/9205c35f-9397-4630-8d43-87967f350b05">
+
+<img width="1440" alt="Captura de pantalla 2024-03-13 a la(s) 13 51 47" src="https://github.com/Manriboy/masterIEBS/assets/156150473/afc65d23-9f44-4c03-bd7e-35bba34810f0">
 
 Contrato 2: Compra, venta e inversión de token
+
 0xAF35Fd63c4fAB18DA614FCe6d30818AF27324D7D
-IMAGEN
-CODIGO
+
+<img width="1440" alt="Captura de pantalla 2024-03-13 a la(s) 14 10 35" src="https://github.com/Manriboy/masterIEBS/assets/156150473/a2802991-39a1-4cd3-8990-66f93d7fa633">
 
 Despliegue de Smart Contract 1
+
 Hash transaccion
+
 0x9361f38b809b631723bf34355ac0e49979051fed73fc082c7a8bbe61889dd775
-IMAGEN
+
+<img width="1440" alt="Captura de pantalla 2024-03-13 a la(s) 14 13 55" src="https://github.com/Manriboy/masterIEBS/assets/156150473/65e253a3-193d-4d07-9b22-fc122c4a758a">
 
 Address para incluir en Smart Contract 2
+
 0x0d66bc92c8C432de0b3379068F528ED97132a194 (Smart Contract 1)
-IMAGEN
+
+<img width="1440" alt="Captura de pantalla 2024-03-13 a la(s) 14 14 18" src="https://github.com/Manriboy/masterIEBS/assets/156150473/ea6985c2-fae5-4374-8724-a06cf74e88e6">
 
 Despliegue de Smart Contract 2
+
 Hash transaccion
+
 0xde5fcdaaf3f795d9579acb0e40909abb9c76a9b28e71b50ae17126bd2eab896d
-IMAGEN
+
+<img width="1440" alt="Captura de pantalla 2024-03-13 a la(s) 14 15 22" src="https://github.com/Manriboy/masterIEBS/assets/156150473/f1586469-b9a5-46c1-8fa5-e0c0c59ac4b5">
 
 Funciones Smart Contract 1
-IMAGEN
+
+<img width="307" alt="Captura de pantalla 2024-03-13 a la(s) 14 16 39" src="https://github.com/Manriboy/masterIEBS/assets/156150473/8ffaac6c-696d-42c6-8257-ee271c5d64c9">
 
 Funciones Smart Contract 2
-IMAGEN
+
+<img width="299" alt="Captura de pantalla 2024-03-13 a la(s) 14 17 18" src="https://github.com/Manriboy/masterIEBS/assets/156150473/82b45f6b-570a-4239-8290-7d208402568f">
 
 ## Preguntas y respuestas
 
